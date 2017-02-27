@@ -13,6 +13,22 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 
+//http://davidwalsh.name/javascript-debounce-function
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
 jQuery(document).ready(function($) {
 
 	var loadPartial = function loadPartial(ele, partial) {
@@ -29,6 +45,9 @@ jQuery(document).ready(function($) {
 				} 
 			}
 			$(ele).foundation();
+			
+			saveServerSettings();
+			
 		});
 		
 
@@ -37,7 +56,32 @@ jQuery(document).ready(function($) {
 	//$('#partial_offcanvas').load('./partials/offcanvas.html');
 	 loadPartial('#partial_header', 'header');
 	 loadPartial('#partial_offcanvas', 'offcanvas');
-	 
+
+	//functions:
+	//save server settings
+	//first load if exists
+	var serverSettings = JSON.parse(localStorage.getItem("serverSettings"));
+	console.log(serverSettings);
+	/*$(serverSettings).each(function(a,b) {
+		console.log(a);
+		console.log(b);
+		console.log("#");
+	});*/
+	//then save on keyup
+	var saveServerSettings = function saveServerSettings(){
+		$('#server_settings input').keyup(debounce(function(){
+			var serverSettings = new Object();
+			$('#server_settings input').each(function() {
+				serverSettings[$(this).attr("id")] = $(this).val();
+			});
+			localStorage.setItem ("serverSettings", JSON.stringify(serverSettings));
+			console.log("saved");
+			var serverSettings2 = JSON.parse(localStorage.getItem(serverSettings));
+			console.log(serverSettings);
+		},500));
+	}
+	
+	
 
 	console.info("jquery-code.js done");
 });
