@@ -1,0 +1,79 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'gulpjs/gulp-cli#4.0\n' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.29
+4 verbose cache add [ 'gulpjs/gulp-cli#4.0\n', null ]
+5 verbose cache add name=undefined spec="gulpjs/gulp-cli#4.0\n" args=["gulpjs/gulp-cli#4.0\n",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: '#4.0',
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'gulpjs/gulp-cli',
+6 verbose parsed url   path: 'gulpjs/gulp-cli',
+6 verbose parsed url   href: 'gulpjs/gulp-cli#4.0' }
+7 silly lockFile 1a49c3f0-gulpjs-gulp-cli-4-0 gulpjs/gulp-cli#4.0
+8 verbose lock gulpjs/gulp-cli#4.0
+8 verbose lock  /root/.npm/1a49c3f0-gulpjs-gulp-cli-4-0.lock
+9 info maybeGithub Attempting gulpjs/gulp-cli#4.0
+9 info maybeGithub  from git://github.com/gulpjs/gulp-cli#4.0
+10 silly lockFile ef2c3355-t-github-com-gulpjs-gulp-cli-4-0 git://github.com/gulpjs/gulp-cli#4.0
+11 verbose lock git://github.com/gulpjs/gulp-cli#4.0
+11 verbose lock  /root/.npm/ef2c3355-t-github-com-gulpjs-gulp-cli-4-0.lock
+12 verbose addRemoteGit [ 'git://github.com/gulpjs/gulp-cli#4.0\n', '4.0' ]
+13 verbose git clone git://github.com/gulpjs/gulp-cli#4.0
+ Klone in Bare-Repository '/root/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-4-0--ef2c3355'...
+13 verbose git clone git://github.com/gulpjs/gulp-cli#4.0
+ fatal: remote error:
+13 verbose git clone git://github.com/gulpjs/gulp-cli#4.0
+   gulpjs/gulp-cli#4.0 is not a valid repository name
+13 verbose git clone git://github.com/gulpjs/gulp-cli#4.0
+   Email support@github.com for help
+14 silly lockFile ef2c3355-t-github-com-gulpjs-gulp-cli-4-0 git://github.com/gulpjs/gulp-cli#4.0
+15 silly lockFile ef2c3355-t-github-com-gulpjs-gulp-cli-4-0 git://github.com/gulpjs/gulp-cli#4.0
+16 info maybeGithub Attempting gulpjs/gulp-cli#4.0
+16 info maybeGithub  from git+ssh://git@github.com:gulpjs/gulp-cli#4.0
+17 silly lockFile 49831add-t-github-com-gulpjs-gulp-cli-4-0 git@github.com:gulpjs/gulp-cli#4.0
+18 verbose lock git@github.com:gulpjs/gulp-cli#4.0
+18 verbose lock  /root/.npm/49831add-t-github-com-gulpjs-gulp-cli-4-0.lock
+19 verbose addRemoteGit [ 'git@github.com:gulpjs/gulp-cli#4.0\n', '4.0' ]
+20 error git clone git@github.com:gulpjs/gulp-cli#4.0
+ Klone in Bare-Repository '/root/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-4-0--49831add'...
+20 error git clone git@github.com:gulpjs/gulp-cli#4.0
+ Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+20 error git clone git@github.com:gulpjs/gulp-cli#4.0
+ Permission denied (publickey).
+20 error git clone git@github.com:gulpjs/gulp-cli#4.0
+ fatal: Could not read from remote repository.
+20 error git clone git@github.com:gulpjs/gulp-cli#4.0
+20 error git clone git@github.com:gulpjs/gulp-cli#4.0
+ Please make sure you have the correct access rights
+20 error git clone git@github.com:gulpjs/gulp-cli#4.0
+ and the repository exists.
+21 silly lockFile 49831add-t-github-com-gulpjs-gulp-cli-4-0 git@github.com:gulpjs/gulp-cli#4.0
+22 silly lockFile 49831add-t-github-com-gulpjs-gulp-cli-4-0 git@github.com:gulpjs/gulp-cli#4.0
+23 silly lockFile 1a49c3f0-gulpjs-gulp-cli-4-0 gulpjs/gulp-cli#4.0
+24 silly lockFile 1a49c3f0-gulpjs-gulp-cli-4-0 gulpjs/gulp-cli#4.0
+25 error addLocal Could not install gulpjs/gulp-cli#4.0
+26 error Error: ENOENT, stat 'gulpjs/gulp-cli#4.0
+26 error '
+27 error If you need help, you may report this *entire* log,
+27 error including the npm and node versions, at:
+27 error     <http://github.com/npm/npm/issues>
+28 error System Linux 4.4.38-v7+
+29 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "gulpjs/gulp-cli#4.0\n"
+30 error cwd /var/www/TeeWorkOne/www
+31 error node -v v0.10.29
+32 error npm -v 1.4.21
+33 error path gulpjs/gulp-cli#4.0
+34 error code ENOENT
+35 error errno 34
+36 verbose exit [ 34, true ]

@@ -51,6 +51,10 @@ jQuery(document).ready(function($) {
 						loadPartial('#offcanvas_content', 'contents/server_settings');
 						console.log('in case server_settings');
 					break;
+					case "ratings":
+						loadPartial('#offcanvas_content', 'contents/ratings');
+						console.log('in case ratings');
+					break;
 					default:
 						$('#offcanvas_content').html("default no content");
 						console.log('in case default');
@@ -64,7 +68,7 @@ jQuery(document).ready(function($) {
 			}
 			fncUserSettings();
 			//fncTea()
-			//fncRatings();
+			fncRatings();
 			//fncAttributes();
 			
 		});
@@ -231,8 +235,31 @@ jQuery(document).ready(function($) {
 			});
 		});
 	}
-	
-	
+	var fncRatings = function fncRatings(){
+		$('#ratings_table_div').ready(function(){
+				
+			$.ajax({
+				url: serverSettings["server_url"], 
+				data: {
+					action: "getRatings",
+					unique_id: localStorage.getItem("ws_unique_id", ws_unique_id),
+					data: JSON.stringify("nix"),
+				},
+				success: function(result) {
+					var res = JSON.parse(result);
+					console.log(res);
+					if(res['success'] == 0) {
+						$('#ratings_table_div').html(res['data']);
+						createRatingsTable(res['data']);
+					}
+				},
+				async: false
+			});
+		});
+	}
+	var createRatingsTable = function createRatingsTable(){
+	console.log("creating ratings html table");
+	}
 
 	console.info("jquery-code.js done");
 });
