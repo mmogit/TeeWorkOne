@@ -1,0 +1,17 @@
+{
+  "name": "io.cordova.teeworkone",
+  "version": "1.0.0",
+  "displayName": "TeeWorkOne",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "https://github.com/apache/cordova-android",
+    "cordova-plugin-whitelist": "1"
+  }
+}

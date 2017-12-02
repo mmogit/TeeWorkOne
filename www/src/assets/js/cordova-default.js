@@ -18,7 +18,7 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function() { 
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 

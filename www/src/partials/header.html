@@ -1,0 +1,40 @@
+<header>
+<div class="title-bar">
+  <div class="title-bar-left">
+    <button class="menu-icon" type="button" data-open="offCanvasUser"></button>
+  </div>
+  <div class="title-bar-middle">
+    <button class="menu-icon" type="button" data-open="offCanvasTea"></button>
+  </div>
+  <div class="title-bar-right">
+    <button class="menu-icon" type="button" data-open="offCanvasServer"></button>
+  </div>
+</div>
+
+<div class="off-canvas position-left" id="offCanvasUser" data-off-canvas data-transition="overlap">
+	<h2>Benutzer Einstellungen</h2>
+	<ul class="vertical menu drilldown" data-drilldown>
+	  <li><a href="login.html">Login</a></li>
+	  <li>
+		<a href="#">Two</a>
+		<ul class="menu vertical nested">
+		  <li><a href="#">Two A</a></li>
+		  <li><a href="#">Two B</a></li>
+		  <li><a href="#">Two C</a></li>
+		  <li><a href="#">Two D</a></li>
+		</ul>
+	  </li>
+	  <li><a href="#">Three</a></li>
+	  <li><a href="#">Four</a></li>
+	</ul>
+</div>
+
+<div class="off-canvas position-top" id="offCanvasTea" data-off-canvas data-transition="overlap">
+<h2>Tee Aktionen</h2>
+</div>
+
+<div class="off-canvas position-right" id="offCanvasServer" data-off-canvas data-transition="overlap">
+<h2>Server Einstellungen</h2>
+</div> 
+
+</header>
